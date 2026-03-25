@@ -20,7 +20,7 @@ Lightweight server monitoring
 
 
 ## Screenshots
-![Screenshot of Beszel](./doc/screenshots/example.jpg)
+![Screenshot of Beszel](./doc/screenshots/screenshot.png)
 
 ## 📦 Developer info
 
