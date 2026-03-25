@@ -1,0 +1,59 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "beszel"
+name = "Beszel"
+description.en = "Lightweight server monitoring"
+description.fr = "Monitoring de serveurs"
+
+version = "0.18.4~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "MIT"
+website = "https://www.beszel.dev/"
+admindoc = "https://beszel.dev/guide/hub-installation#binary"
+code = "https://github.com/henrygd/beszel"
+
+[integration]
+yunohost = ">= 12.1.39"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    in_subdir = false
+    amd64.url = "https://github.com/henrygd/beszel/releases/download/v0.18.4/beszel_linux_amd64.tar.gz"
+    amd64.sha256 = "94420342b6e1e9b7a5fd0457388573148c9de39763c04cfea715865c914cf470"
+
+    autoupdate.strategy = "latest_github_release"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]

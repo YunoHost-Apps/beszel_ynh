@@ -1,0 +1,15 @@
+[Unit]
+Description=Beszel Hub
+After=network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/beszel serve --http "127.0.0.1:__PORT__"
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
