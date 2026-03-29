@@ -21,8 +21,6 @@ chmod +x $install_dir/beszel
 #=================================================
 #ynh_script_progression "Adding $app's configuration files..."
 
-#ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
-
 #$install_dir/beszel superuser upsert $mail $"password"
 
 #=================================================
