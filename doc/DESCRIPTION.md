@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Beszel is a lightweight server monitoring platform that includes Docker statistics, historical data, and alert functions.
