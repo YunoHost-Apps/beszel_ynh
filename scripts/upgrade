@@ -14,6 +14,18 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service="$app" --action="stop"
 
 #=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+
+if [ -d $install_dir/beszel_data ]; then
+    ynh_script_progression "Migrating data directory..."
+    shopt -s dotglob nullglob
+    mv $install_dir/beszel_data/* $data_dir/
+    ynh_safe_rm $install_dir/beszel_data
+    shopt -u dotglob nullglob
+fi
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
@@ -30,6 +42,15 @@ ynh_config_add_nginx
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="Lightweight server monitoring" --log="/var/log/$app/$app.log"
+
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression "Running the app's migrations..."
+
+pushd $install_dir
+    ynh_exec_as_app $install_dir/beszel migrate --dir $data_dir
+popd
 
 #=================================================
 # START SYSTEMD SERVICE
