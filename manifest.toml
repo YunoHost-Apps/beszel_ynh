@@ -7,7 +7,7 @@ name = "Beszel"
 description.en = "Lightweight server monitoring"
 description.fr = "Monitoring de serveurs"
 
-version = "0.18.8~ynh2"
+version = "0.18.8~ynh3"
 
 maintainers = ["eric_G"]
 
