@@ -18,7 +18,7 @@ admindoc = "https://beszel.dev/guide/hub-installation#binary"
 code = "https://github.com/henrygd/beszel"
 
 [integration]
-yunohost = ">= 12.1.39"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures = [ "amd64", "arm64", "armhf" ]
 multi_instance = true
