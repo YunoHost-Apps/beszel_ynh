@@ -7,7 +7,7 @@ name = "Beszel"
 description.en = "Lightweight server monitoring"
 description.fr = "Monitoring de serveurs"
 
-version = "0.21.0~ynh1"
+version = "0.21.1~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -44,12 +44,12 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     in_subdir = false
-    amd64.url = "https://github.com/henrygd/beszel/releases/download/v0.21.0/beszel_linux_amd64.tar.gz"
-    amd64.sha256 = "c0cbab161f322426228419fbbeab4163dded6464a537cc1e2f92e090892f6368"
-    arm64.url = "https://github.com/henrygd/beszel/releases/download/v0.21.0/beszel_linux_arm64.tar.gz"
-    arm64.sha256 = "c574e351cc870194e6afaaec36cdfbc2ec2388da767f2f1b544692eb53b8d36e"
-    armhf.url = "https://github.com/henrygd/beszel/releases/download/v0.21.0/beszel_linux_arm.tar.gz"
-    armhf.sha256 = "291efaf6e11798f8b928ae4dd82b66c06c3e93ca6c72cbc9db3b84638af59fe5"
+    amd64.url = "https://github.com/henrygd/beszel/releases/download/v0.21.1/beszel_linux_amd64.tar.gz"
+    amd64.sha256 = "70857d0489cf790224167815c82f8807cc28134d27f209b58b1cd36e4082931a"
+    arm64.url = "https://github.com/henrygd/beszel/releases/download/v0.21.1/beszel_linux_arm64.tar.gz"
+    arm64.sha256 = "c2357b94d36febfd0c6df9f89f523fff6f6df69a4b8ac91a8b262d2b7fdb0584"
+    armhf.url = "https://github.com/henrygd/beszel/releases/download/v0.21.1/beszel_linux_arm.tar.gz"
+    armhf.sha256 = "69508f85af0f2bbb4412bb220c66b40d186d94fc158f2396e76e296ddc5b9150"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "beszel_linux_amd64.tar.gz"
