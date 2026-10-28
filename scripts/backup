@@ -24,6 +24,9 @@ ynh_backup "/etc/nginx/conf.d/$domain.d/$app.conf"
 # Backup the systemd service unit
 ynh_backup "/etc/systemd/system/$app.service"
 
+# Backup the DB
+ynh_backup "/home/yunohost.app/$app/"
+
 #=================================================
 # END OF SCRIPT
 #=================================================
